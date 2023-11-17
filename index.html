@@ -1,0 +1,19 @@
+<!-- FILEPATH: index.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Server Hostname</title>
+    <script>
+        // Fetch the hostname and update the content of the element with id "hostname"
+        window.addEventListener('DOMContentLoaded', () => {
+            const hostnameElement = document.getElementById('hostname');
+            hostnameElement.textContent = window.location.hostname;
+        });
+    </script>
+</head>
+<body>
+    <h1>Web Server Hostname</h1>
+    <p>The current web server hostname is: <span id="hostname"></span></p>
+</body>
+</html>
