@@ -3,24 +3,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Kubernetes Pod Name</title>
+    <title>Web Server Hostname</title>
     <script>
-        // Fetch the pod name and update the content of the element with id "podname"
+        // Fetch the hostname and update the content of the element with id "hostname"
         window.addEventListener('DOMContentLoaded', () => {
-            const podnameElement = document.getElementById('podname');
-            fetch('/api/podname')
-                .then(response => response.text())
-                .then(podname => {
-                    podnameElement.textContent = podname;
-                })
-                .catch(error => {
-                    console.error('Error fetching pod name:', error);
-                });
+            const hostnameElement = document.getElementById('hostname');
+            hostnameElement.textContent = window.location.hostname;
         });
     </script>
 </head>
 <body>
-    <h1>Kubernetes Pod Name</h1>
-    <p>The current Kubernetes pod name is: <span id="podname"></span></p>
+    <h1>Web Server Hostname</h1>
+    <p>The current web server hostname is: <span id="hostname"></span></p>
 </body>
 </html>
